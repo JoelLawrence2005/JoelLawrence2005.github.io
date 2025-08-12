@@ -77,3 +77,23 @@ body {
     color: #111827; /* dark text for contrast */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
+/* New CSS for blog post content */
+/* Uses Tailwind's @layer directive to apply typography styles */
+@layer base {
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply text-white font-bold;
+  }
+  .prose p, .prose li {
+    @apply text-gray-300;
+  }
+  .prose a {
+    @apply text-cyan-400 hover:text-cyan-300 transition-colors;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-cyan-400 pl-4 py-1 text-gray-400 italic;
+  }
+  .prose img {
+    @apply rounded-xl;
+  }
+}
