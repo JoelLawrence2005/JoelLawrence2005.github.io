@@ -97,3 +97,8 @@ body {
     @apply rounded-xl;
   }
 }
+
+/* hide blogs */
+.hidden-blog {
+  display: none;
+}
