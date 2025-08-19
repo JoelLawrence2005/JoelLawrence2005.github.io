@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Curious Case of the Portobello Mushroom</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .prose-invert h1, .prose-invert h2, .prose-invert h3 {
+            color: #ffffff;
+        }
+        .prose-invert a {
+            color: #06b6d4; /* A light cyan for links */
+            text-decoration: none;
+        }
+        .prose-invert a:hover {
+            color: #22d3ee;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1a202c; /* bg-gray-900 */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0.5rem;
+            border: 1px solid #374151; /* border-gray-700 */
+        }
+        .dropdown-content a {
+            color: #d1d5db; /* text-gray-300 */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #374151; /* hover:bg-gray-700 */
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .prose-invert blockquote {
+            border-left-color: #06b6d4;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900 p-4 border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/index.html" class="text-3xl font-extrabold text-cyan-400 hover:text-cyan-300 transition-colors">CGTMF</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="/index.html" class="text-gray-300 hover:text-cyan-400 font-medium transition-colors">Home</a>
+                <!-- Dropdown for Research and tags -->
+                <div class="dropdown">
+                    <button class="text-gray-300 hover:text-cyan-400 font-medium transition-colors">
+                        <a href="/all-blogs.html">Blogs</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Tech</a>
+                        <a href="#">Research</a>
+                        <a href="#">Games</a>
+                        <a href="#">Movies</a>
+                        <a href="#">Food</a>
+                        <a href="#">World News</a>
+                    </div>
+                </div>
+                <a href="#" class="text-gray-300 hover:text-cyan-400 font-medium transition-colors">About</a>
+            </nav>
+            <button class="md:hidden text-gray-300 hover:text-cyan-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content for Blog Post -->
+    <main class="container mx-auto p-4 md:p-8">
+        <!-- Main Content Card -->
+        <article class="prose prose-invert max-w-none lg:prose-xl mx-auto py-12 blog-content">
+            <header class="mb-12 text-center">
+                <h1 class="text-5xl font-extrabold text-white">The Curious Case of the Portobello Mushroom</h1>
+                <p class="mt-4 text-gray-400 text-lg">
+                    By <a href="#" class="text-cyan-400 hover:text-cyan-300">Joel Lawrence</a> | August 18th, 2025
+                </p>
+            </header>
+            
+            <img src="./ALL-RESOURCES/PM-HeroPhoto.png" alt="An image of a Portobello mushroom" class="w-full rounded-xl mb-12">
+            
+            <div class="prose-custom max-w-none prose-lg md:prose-xl">
+                <p>
+                    The Portobello mushroom, a large, meaty fungi widely celebrated in Italian cuisine, is known for its rich, earthy, and umami flavor. This distinctive taste comes from a naturally occurring amino acid called glutamate, also found in foods like parmesan cheese. The mushroom is a culinary favorite, often grilled, baked, or fried to be the centerpiece of a dish.
+                </p>
+    
+                <blockquote>
+                    "Portobello mushrooms have a rich, earthy, meaty, and brothy flavor, a combination of flavors known as umami."
+                </blockquote>
+            </div>
+
+            <!-- Content Blocks -->
+            <section class="mt-12 space-y-12">
+                <!-- Section 1: Unpacking the Mushroom's Identity -->
+                <div class="md:grid md:grid-cols-2 md:gap-8 items-center bg-gray-800 p-6 rounded-2xl shadow-sm">
+                    <div class="md:order-2">
+                        <h2 class="text-3xl font-bold text-gray-100 mb-4">Unpacking the Mushroom's Identity</h2>
+                        <p>
+                            The scientific name for this mushroom is <i>Agaricus Bisporus</i>, and it's part of the <i>Agaricaceae</i> family. This family contains both edible and poisonous species. The edible varieties are considered to have medicinal properties, helping to fight physical and emotional stress, stimulate the immune system, and improve the quality of life for people with diabetes.
+                        </p>
+                    </div>
+                    <div class="md:order-1 mt-6 md:mt-0">
+                        <img src="./ALL-RESOURCES/PM-TypesOfMushrooms.png" alt="A scientific illustration of the Agaricus Bisporus mushroom" class="w-full rounded-2xl shadow-md">
+                    </div>
+                </div>
+
+                <!-- Section 2: The Toxin Within: Agaritine -->
+                <div class="md:grid md:grid-cols-2 md:gap-8 items-center bg-gray-800 p-6 rounded-2xl shadow-sm">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-100 mb-4">The Toxin Within: Agaritine</h2>
+                        <p>
+                            Despite its popularity, the Portobello mushroom, like other cultivated <i>Agaricus</i> species, contains a mycotoxin called Agaritine. This compound is classified as a carcinogen, meaning it has the potential to cause cancer. Agaritine is an aromatic derivative of Hydrazine and also an α-aminoacid, as well as a derivative of Phenylhydrazine.
+                        </p>
+                    </div>
+                    <div class="mt-6 md:mt-0">
+                        <img src="./ALL-RESOURCES/PM-Agaritine.png" alt="A diagram of the Agaritine chemical structure" class="w-full rounded-2xl shadow-md">
+                    </div>
+                </div>
+                
+                <!-- Section 3: Exploring the Chemical Connections -->
+                <div class="md:grid md:grid-cols-2 md:gap-8 items-center bg-gray-800 p-6 rounded-2xl shadow-sm">
+                    <div class="md:order-2">
+                        <h3 class="text-2xl font-bold text-gray-100 mb-4">Exploring the Chemical Connections</h3>
+                        <p>
+                            To understand Agaritine, we need to look at its core components. An α-aminoacid is a molecule with carboxylic acid groups and amine groups on adjacent carbon atoms. Phenylhydrazine, another derivative of Agaritine, is a compound primarily used to induce anemia in animal studies.
+                        </p>
+                        <p class="mt-4">
+                            The other key component is Hydrazine. It is a molecule of two singly-bonded nitrogen atoms and four peripheral hydrogen atoms. In its anhydrous form, it is a colorless, toxic irritant and sensitizer that can damage the central nervous system.
+                        </p>
+                    </div>
+                    <div class="md:order-1 mt-6 md:mt-0">
+                        <img src="./ALL-RESOURCES/PM-Hydrazine.png" alt="Hydrazine" class="w-full rounded-2xl shadow-md">
+                        <img src="./ALL-RESOURCES/PM-AlphaAmino.png" alt="AlphaAmino" class="w-full rounded-2xl shadow-md">
+                    </div>
+                </div>
+
+                <!-- Section 4: From Fungi to Flight -->
+                <div class="md:grid md:grid-cols-2 md:gap-8 items-center bg-gray-800 p-6 rounded-2xl shadow-sm">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-100 mb-4">From Fungi to Flight</h3>
+                        <p>
+                            Interestingly, hydrazine is not just found in mushrooms. It is a widely used compound in various industries, including boiler treatment, agricultural chemicals, pharmaceuticals, and even in the creation of spandex fibers. Most notably, it is used as a rocket propellant.
+                        </p>
+                        <p class="mt-4">
+                            Hydrazine burns very exothermically in the presence of oxygen, generating a large amount of hot gas that provides the thrust for a rocket. This compound was famously used to power F-16 Jets.
+                        </p>
+                    </div>
+                    <div class="mt-6 md:mt-0">
+                        <img src="./ALL-RESOURCES/PM-Jet.png" alt="An image of an F-16 jet" class="w-full rounded-2xl shadow-md">
+                    </div>
+                </div>
+
+                <!-- Section 5: A Concluding Thought -->
+                <div class="bg-gray-800 p-6 rounded-2xl shadow-sm">
+                    <h2 class="text-3xl font-bold text-gray-100 mb-4">A Concluding Thought</h2>
+                    <p>
+                        The process of extracting this compound from the mushroom is not widely available, and this topic is rarely discussed. It's an intriguing aspect of the portobello mushroom that connects it from a culinary delight to a compound with a much more complex and powerful role in science and industry.
+                    </p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 p-6 border-t border-gray-800 text-center text-gray-500 mt-16">
+        <div class="container mx-auto">
+            <p>&copy; 2025 TechPulse. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

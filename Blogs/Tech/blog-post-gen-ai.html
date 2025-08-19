@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGTMF Blog</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link to the new master CSS file -->
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body class="bg-gray-950 text-gray-100 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900 p-4 border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/index.html" class="text-3xl font-extrabold text-cyan-400 hover:text-cyan-300 transition-colors">CGTMF</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="/index.html" class="text-gray-300 hover:text-cyan-400 font-medium transition-colors">Home</a>
+                <!-- Dropdown for Research and tags -->
+                <div class="dropdown">
+                    <button class="text-gray-300 hover:text-cyan-400 font-medium transition-colors">
+                        <a href="/all-blogs.html">Blogs</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Tech</a>
+                        <a href="#">Research</a>
+                        <a href="#">Games</a>
+                        <a href="#">Movies</a>
+                        <a href="#">Food</a>
+                        <a href="#">World News</a>
+                    </div>
+                </div>
+                <a href="#" class="text-gray-300 hover:text-cyan-400 font-medium transition-colors">About</a>
+            </nav>
+            <button class="md:hidden text-gray-300 hover:text-cyan-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content for Blog Post -->
+    <main class="container mx-auto p-4 md:p-8">
+        <article class="prose prose-invert max-w-none lg:prose-xl mx-auto py-12">
+            <header class="mb-12 text-center">
+                <h1 class="text-5xl font-extrabold text-white">The Rise of Generative AI</h1>
+                <p class="mt-4 text-gray-400 text-lg">
+                    By <a href="#" class="text-cyan-400 hover:text-cyan-300">Jane Doe</a> | October 26, 2023
+                </p>
+            </header>
+
+            <img src="" class="w-full rounded-xl mb-12">
+
+            <p>
+                In recent years, the field of artificial intelligence has seen a significant breakthrough with the rise of Generative AI. Unlike traditional AI models that primarily focus on analysis and classification, generative models are capable of creating new, original content. This includes everything from realistic images and music to compelling text and code, pushing the boundaries of what we thought was possible for machines to create.
+            </p>
+
+            <blockquote>
+                "The creative potential unlocked by Generative AI is not just an incremental step forward; it's a paradigm shift."
+            </blockquote>
+
+            <p>
+                The technology behind Generative AI, often powered by deep learning architectures like Generative Adversarial Networks (GANs) and Transformers, is complex. However, its impact on various industries is clear. In the arts, it's enabling new forms of digital expression. In business, it's automating content creation and speeding up design processes. And in science, it's being used to simulate and generate new hypotheses.
+            </p>
+
+            <p>
+                As this technology continues to evolve, it raises important questions about creativity, authorship, and the future of work. While the tools are becoming more powerful, the human element of guidance and intention remains crucial. The symbiotic relationship between human and machine creativity is just beginning to take shape, promising a future full of possibilities we're only just starting to imagine.
+            </p>
+
+            <h2>Understanding the Core Technology</h2>
+            <p>
+                At the heart of many generative AI models are two competing neural networks: a generator and a discriminator. The generator creates new data, while the discriminator evaluates it. This adversarial process forces the generator to produce increasingly realistic and high-quality outputs.
+            </p>
+
+            <h3>Applications in Different Fields</h3>
+            <ul>
+                <li><strong>Art and Design:</strong> Creating unique digital artwork and prototypes.</li>
+                <li><strong>Music and Audio:</strong> Composing new musical pieces and generating sound effects.</li>
+                <li><strong>Software Development:</strong> Writing code snippets, autocompleting functions, and generating documentation.</li>
+                <li><strong>Science and Research:</strong> Accelerating drug discovery and simulating complex biological systems.</li>
+            </ul>
+
+            <p>
+                The path ahead is filled with both immense potential and ethical considerations. As we embrace these new tools, it's essential to foster a discussion around responsible development and application to ensure that Generative AI serves to augment human capabilities rather than replace them.
+            </p>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 p-6 border-t border-gray-800 text-center text-gray-500 mt-16">
+        <div class="container mx-auto">
+            <p>&copy; 2023 TechPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
