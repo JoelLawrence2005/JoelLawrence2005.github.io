@@ -225,7 +225,6 @@ window.onload = function() {
         allBlogsContainer.appendChild(card);
     });
 };
-=======
 // This script provides functionality for dynamic blog content.
 // It handles a "new" tag system based on publication date and
 // allows users to filter blog posts by category tags.
