@@ -65,68 +65,16 @@
             <p class="text-gray-400 mb-8 max-w-2xl">
                 Check out the latest discussions on a variety of topics, from breaking news to new games.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Portobello Mushrooms -->
-                <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 card-hover relative group">
-                    <a href="Blogs/Science/blog-post-portobello-mushrooms.html">
-                        <span class="absolute top-6 right-6 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">New</span>
-                        <img src="Blogs/Science/ALL-RESOURCES/PM-HeroPhoto.png" alt="Country News" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-semibold text-white mb-3">The Curious Case of the Portobello Mushroom</h3>
-                            <p class="text-gray-400 text-sm mb-4">
-                                based on something I came across from the Joe Rogan, linking Portobello Mushrooms and Jet Fuel,
-                                it of couse 😂, has no direct connection, but it's worth knowing, some information are so important
-                                that they're uselss.
-                            </p>
-                            <div class="flex items-center text-gray-500 text-sm">
-                                <span class="mr-2">By Me, I run this thing</span>
-                                <span>•</span>
-                                <span class="ml-2">August 18th, 2025 (did it sometime back can't remember)</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- New Blog Post Card 2: Movies -->
-                <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 card-hover relative group hidden-blog">
-                    <span class="absolute top-6 right-6 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">New</span>
-                    <img src="" alt="upcoming" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold text-white mb-3">Upcoming</h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            
-                        </p>
-                        <div class="flex items-center text-gray-500 text-sm">
-                            <span class="mr-2">Author</span>
-                            <span>•</span>
-                            <span class="ml-2">Date</span>
-                        </div>
-                    </div>
-                </div>
-
+            <div id="newly-added-container" class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Blog posts will be injected here dynamically -->
             </div>
         </section>
 
         <!-- All Other Blogs Section -->
         <section class="my-16">
             <h2 class="text-4xl font-bold text-white mb-10 border-b-2 border-cyan-400 pb-2 inline-block">All Other Blogs</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-
-                <!-- Blog Post Card 2: Games -->
-                <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 card-hover group">
-                    <img src="https://placehold.co/600x400/1e293b/94a3b8?text=Gaming+Trends" alt="Gaming Trends" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-white mb-2">Gaming Trends: What to Play Next</h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            A look at the latest releases, upcoming titles, and trends in the gaming world.
-                        </p>
-                        <div class="flex items-center text-gray-500 text-xs">
-                            <span class="mr-2">By John Smith</span>
-                            <span>•</span>
-                            <span class="ml-2">October 25, 2023</span>
-                        </div>
-                    </div>
-                </div>
+            <div id="all-blogs-container" class="scroll-container">
+                <!-- Blog posts will be injected here dynamically -->
             </div>
         </section>
     </main>
@@ -142,7 +90,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <!-- Custom Three.js Script for the particle background -->
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>

@@ -62,6 +62,47 @@
         .prose-invert blockquote {
             border-left-color: #06b6d4;
         }
+        .image-slider-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 2rem;
+        }
+        .image-slider-container label {
+            margin-right: 1rem;
+            color: #9ca3af;
+        }
+        .image-slider-container input[type="range"] {
+            -webkit-appearance: none;
+            width: 150px;
+            height: 8px;
+            background: #4b5563;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+            border-radius: 4px;
+        }
+        .image-slider-container input[type="range"]:hover {
+            opacity: 1;
+        }
+        .image-slider-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #06b6d4;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid #1f2937;
+        }
+        .image-slider-container input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #06b6d4;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid #1f2937;
+        }
     </style>
 </head>
 <body class="bg-gray-950 text-gray-100 antialiased">
@@ -101,11 +142,17 @@
             <header class="mb-12 text-center">
                 <h1 class="text-5xl font-extrabold text-white">The Curious Case of the Portobello Mushroom</h1>
                 <p class="mt-4 text-gray-400 text-lg">
-                    By <a href="#" class="text-cyan-400 hover:text-cyan-300">Joel Lawrence</a> | August 18th, 2025
+                    By <a class="text-cyan-400 hover:text-cyan-300">Joel Lawrence</a> | August 18th, 2025
                 </p>
             </header>
             
-            <img src="./ALL-RESOURCES/PM-HeroPhoto.png" alt="An image of a Portobello mushroom" class="w-full rounded-xl mb-12">
+            <!-- New Image Size Slider -->
+            <div class="image-slider-container">
+                <label for="image-size-slider" class="text-gray-400">Image Size:</label>
+                <input type="range" id="image-size-slider" min="30" max="100" value="100">
+            </div>
+
+            <img id="main-hero-image" src="./ALL-RESOURCES/PM-HeroPhoto.png" alt="An image of a Portobello mushroom" class="w-full rounded-xl mb-12">
             
             <div class="prose-custom max-w-none prose-lg md:prose-xl">
                 <p>
@@ -195,5 +242,28 @@
             <p>&copy; 2025 TechPulse. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Image Sizing -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sizeSlider = document.getElementById('image-size-slider');
+            const images = document.querySelectorAll('.blog-content img');
+
+            // Set initial state
+            images.forEach(img => {
+                img.style.maxWidth = `${sizeSlider.value}%`;
+                img.style.transition = 'max-width 0.3s ease-in-out';
+                img.style.margin = '2rem auto'; // Center images
+                img.style.display = 'block';
+            });
+
+            sizeSlider.addEventListener('input', (event) => {
+                const newSize = event.target.value;
+                images.forEach(img => {
+                    img.style.maxWidth = `${newSize}%`;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
