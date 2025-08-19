@@ -12,7 +12,7 @@ body {
 
 /* Custom styles for glow effect on hero text */
 .text-glow {
-    text-shadow: 0 0 8px rgba(59, 130, 246, 0.6), 0 0 16px rgba(59, 130, 246, 0.4);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.7), 0 0 16px rgba(6, 182, 212, 0.5);
 }
 
 /* More pronounced hover effect for cards */
@@ -48,6 +48,8 @@ body {
     right: 0;
     border-radius: 0.5rem;
     padding: 0.5rem 0;
+    border: 1px solid #374151;
+    overflow: hidden;
 }
 
 .dropdown-content a {
@@ -81,19 +83,61 @@ body {
 /* New CSS for blog post content */
 /* Uses Tailwind's @layer directive to apply typography styles */
 @layer base {
-  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
     @apply text-white font-bold;
-  }
-  .prose p, .prose li {
+}
+.prose p, .prose li {
     @apply text-gray-300;
-  }
-  .prose a {
+}
+.prose a {
     @apply text-cyan-400 hover:text-cyan-300 transition-colors;
-  }
-  .prose blockquote {
+}
+.prose blockquote {
     @apply border-l-4 border-cyan-400 pl-4 py-1 text-gray-400 italic;
-  }
-  .prose img {
+}
+.prose img {
     @apply rounded-xl;
-  }
+}
+}
+
+/* hide blogs */
+.hidden-blog {
+    display: none;
+}
+
+/*
+* New styles for horizontal scrolling
+* The padding-left here ensures the cards align with the rest of the content
+* and prevents the hover effect from being cut off.
+*/
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    margin-right: 2rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+/* Custom style to make cards longer and allow them to grow if needed */
+.long-card {
+    min-height: 450px;
 }
